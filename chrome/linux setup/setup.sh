@@ -1,10 +1,10 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 # Created by: Mikael Amare
 # Created on: Sept 2024
-# Zsh terminal dotfiles and setup script
+# AWS Debian Linux dotfiles and setup script
 
-brew update
-brew upgrade -y
+sudo apt update
+sudo apt upgrade -y
 
 # common programs
 sudo apt remove w3m -y
@@ -23,7 +23,7 @@ cd .. || exit
 sudo rm -r ./temp
 
 # install languages, bun and Java
-curl -fsSL https://bun.sh/install | Zsh
+curl -fsSL https://bun.sh/install | bash
 # shellcheck source=/dev/null
 source ~/.bashrc
 sudo apt install -y default-jdk

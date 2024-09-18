@@ -1,29 +1,31 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 # Created by: Mikael Amare
 # Created on: Sept 2024
-# AWS Debian Linux dotfiles and setup script
+# Zsh terminal dotfiles and setup script
 
-sudo apt update
-sudo apt upgrade -y
+echo $SHELL
+
+if [ -n "$ZSH_VERSION" ]; then
+    echo "Running in zsh"
+elif [ -n "$BASH_VERSION" ]; then
+    echo "Running in bash"
+else
+    echo "Unsupported shell"
+fi
+
+brew update
+brew upgrade -y
 
 # common programs
 sudo apt remove w3m -y
 sudo apt install gh -y
 sudo apt install stow -y
 
-# install NeoVim from source
-mkdir temp
-cd temp || exit
-sudo apt-get install ninja-build gettext cmake unzip curl -y
-git clone https://github.com/neovim/neovim
-cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
-sudo make install
-cd .. || exit
-cd .. || exit
-sudo rm -r ./temp
+# install NeoVim
+brew install neovim
 
 # install languages, bun and Java
-curl -fsSL https://bun.sh/install | bash
+curl -fsSL https://bun.sh/install | Zsh
 # shellcheck source=/dev/null
-source ~/.bashrc
-sudo apt install -y default-jdk
+source ~/.zshrc
+brew install -y default-jdk
