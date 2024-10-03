@@ -1,9 +1,10 @@
 [credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+  helper = 
+  helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+  helper = 
+  helper = !/usr/bin/gh auth git-credential
 [user]
-	email = mikael.amare@mths.ca
-	name = Mikael amare
+  email = Mikael.Amare@mths.ca
+  name = Mikael Amare
+
