@@ -20,3 +20,6 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 export DENO_INSTALL="$HOME/.deno"
 export PATH=$DENO_INSTALL/bin:$PATH
+
+# Created by `pipx` on 2024-11-19 14:29:15
+export PATH="$PATH:/home/Mikael-Amare/.local/bin"
