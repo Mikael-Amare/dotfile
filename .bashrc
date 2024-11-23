@@ -15,6 +15,8 @@ alias la='ls -A'
 alias l='ls -CF'
 alias ,='cd ..'
 
+alias lintjava='java -jar ./linter/checkstyle.app -c ./linter/sun_checks.xml *.java'
+
 # for bun & deno
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
