@@ -25,3 +25,8 @@ export PATH=$DENO_INSTALL/bin:$PATH
 
 # Created by `pipx` on 2024-11-19 14:29:15
 export PATH="$PATH:/home/Mikael-Amare/.local/bin"
+
+# 3ds project
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=$DEVKITPRO/devkitARM
+export PATH=$DEVKITARM/bin:$PATH
